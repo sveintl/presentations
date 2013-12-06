@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>ZKoss - A Web Framework</title>
+		<title>ZK - An open-source AJAX Web application framework</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -15,8 +15,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
-
+		<!-- simple beige default moon night serif solarized sky -->
+		<link rel="stylesheet" href="css/theme/beige.css" id="theme">
+		<!-- Egen css -->
+		<link rel="stylesheet" href="css/sveintore.css" id="theme">
+		
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
@@ -37,22 +40,72 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>ZK Framework</h1>
-					<h3>Et komponentbasert webrammeverk</h3>
+					<h1>ZK</h1>
+					<h3>Et open-source webrammeverk</h3>
+					<h4>Med AJAX under panseret</h4>
 					<p>
 						<small>Av Lars-Erik Bjørk og Svein-Tore Landsverk</small>
 					</p>
 				</section>
 
 				<section>
-					<h2>ZK</h2>
+					<h2>Hva er ZK?</h2>
 					<p>
-						ZK is a framework for....
+						ZK er et rammeverk som raskt og enkelt lar deg bygge brukergrensesnitt for 
+						web- og mobil-applikasjoner uten å måtte lære JavaScript og AJAX.
 					</p>
 
 					<aside class="notes">
 						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
 					</aside>
+				</section>
+				
+				<section>
+					<h2>Rask oppbygging av brukergrensesnitt</h2>
+					<p class="leftalign">Hundrevis av ferdige komponenter kan</p>
+					<ul>
+						<li class="fragment">kombineres og settes sammen</li> 
+						<li class="fragment">styles og konfigureres</li>
+						<li class="fragment">utvides og tilpasses</li>
+					</ul>					
+					<p class="leftalign fragment">for å skape sidene du ønsker.</p>
+				</section>
+				
+				<section>
+					<h2>ZK User Interface Markup Language</h2>
+					<h4>ZUML</h4>
+					<p>Et markupspråk for utvikling av rike brukergrensesnitt.</p>
+					<pre><code>
+<?link rel="stylesheet" type="text/css" href="styles/main.css"?>
+<zk>
+    <borderlayout hflex="1" vflex="1">
+        <north height="100px" border="none" sclass="bannerContainer">
+            <label style="font-size:50px">North for header</label>
+        </north>
+        <west width="260px" border="none" collapsible="true" splittable="true" minsize="300">
+            <include src="leftmenu.zul" />
+        </west>
+        <center id="mainContent" autoscroll="true">
+            <include src="dealerlist.zul"/>
+        </center>
+        <south height="50px" border="none">
+            <label style="font-size:50px">South for footer</label>
+        </south>
+    </borderlayout>
+</zk>
+					</code></pre>
+					<aside class="notes">
+						XML-formatert. File extension: .zul
+					</aside>
+				</section>
+				
+				<section>
+					<h2>Hvordan er ZK</h2>
+					<ul>
+						<li>Komponentbasert rammeverk</li>
+						<li>Hendelsesdrevet programmeringsmodel</li>
+						<li class="fragment">Utviklere legger til funksjoner som responderer på hendelser i komponentene</li>
+					</ul>
 				</section>
 
 				<!-- Example of nested vertical slides -->
@@ -63,21 +116,33 @@
 							Slides can be nested inside of other slides,
 							try pressing <a href="#" class="navigate-down">down</a>.
 						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
+						
 					</section>
 					<section>
 						<h2>Model View Controller (MVC)</h2>
 						<p>Press down or up to navigate.</p>
+						<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+							System.out.println("MVC");
+						</code></pre>
 					</section>
 					<section>
 						<h2>Model View View Model (MVVM)</h2>
 						<p>Cornify</p>
+						<code>System.out.println("MVVM");</code>
 						<a class="test" href="http://cornify.com">
-							<img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif" alt="Unicorn">
+							<img width="280" height="326" src="http://books.zkoss.org/wiki/File:Getstarted-simpleZK-UI.png" alt="sampleZK-UI">
 						</a>
 					</section>
+				</section>
+				
+				<section>
+					<h2>Linker</h2>
+					<ul>
+						<li><a href="http://books.zkoss.org/wiki/ZK_Getting_Started/Learn_ZK_in_10_Minutes">Kom i gang</a></li>
+						<li><a href="http://www.zkoss.org/documentation">Dokumentasjon</a></li>
+						<li><a href="http://www.zkoss.org/zksandbox/">Komponenter</a></li>
+						<li><a href="http://en.wikipedia.org/wiki/ZK_(framework)">ZK på Wikipedia</a></li>						
+					</ul>
 				</section>
 				
 				<section>
